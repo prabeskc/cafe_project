@@ -26,8 +26,8 @@ jobs:
     - name: Run linter
       run: npm run lint
       
-    - name: Build project
-      run: npm run build
+    - name: Build project (GitHub Pages base path)
+      run: npm run build:gh-pages
       
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main'
