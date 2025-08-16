@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* App background helpers */
+body {
+  @apply bg-background dark:bg-background-dark text-textPrimary dark:text-textPrimary-dark transition-colors duration-200;
+}
+
+.container-max {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.card {
+  @apply rounded-2xl bg-card dark:bg-card-dark shadow-soft dark:shadow-soft-dark border border-border dark:border-border-dark;
+}
+
+.kpi-value {
+  @apply text-2xl sm:text-3xl font-semibold tracking-tight text-textPrimary dark:text-textPrimary-dark;
+}
+
+.kpi-label {
+  @apply text-xs uppercase tracking-wider text-textSecondary dark:text-textSecondary-dark;
+}
