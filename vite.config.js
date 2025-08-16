@@ -4,8 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // Always use root base for Vercel/Netlify; GitHub Pages handled via build:gh-pages script
-  base: '/',
+  // Use relative base for static hosts (Vercel/Netlify). GitHub Pages handled via build:gh-pages script
+  base: '',
   build: {
     outDir: 'dist',
     sourcemap: false,
