@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "deploy:vercel": "vercel --prod",
     "deploy:netlify": "netlify deploy --prod --dir=dist",
-    "build:gh-pages": "vite build --base=/cafe_project/"
+    "build:gh-pages": "vite build --base=/cafe_project/",
+    "postbuild": "cp vercel.json dist/vercel.json || copy vercel.json dist\\vercel.json"
   },
   "dependencies": {
     "react": "^19.1.1",

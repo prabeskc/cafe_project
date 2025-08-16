@@ -1,13 +1,21 @@
 {
+  "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "vite",
-  "rewrites": [
+  "builds": [
     {
-      "source": "/((?!assets/).*)",
-      "destination": "/index.html"
+      "src": "package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { 
+      "src": "/(.*)", 
+      "dest": "/index.html" 
     }
   ],
   "headers": [
@@ -20,5 +28,8 @@
         }
       ]
     }
-  ]
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
